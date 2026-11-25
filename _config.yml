@@ -1,5 +1,14 @@
 title: Ziad Saghir
 description: CTF writeups, threat hunting & CTI labs, and math notes.
 markdown: kramdown
-permalink: /:year/:month/:day/:title/
 exclude: [README.md, SECURITY.md]
+
+# Scoped to posts only, so static Pages (ctf.html, about.html, etc.) keep
+# their plain .html filenames instead of being switched to pretty
+# folder/index.html URLs.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      permalink: /:year/:month/:day/:title/
