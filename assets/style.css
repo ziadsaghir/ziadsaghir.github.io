@@ -1,0 +1,94 @@
+/* System serif stack only - no Google Fonts / CDN, so no third-party
+   requests, nothing to add to the CSP, nothing that can be swapped out
+   from under you by a compromised CDN. */
+:root {
+  --fg: #111111;
+  --muted: #555555;
+  --line: #111111;
+  --link: #0645ad;
+  --link-visited: #551a8b;
+  --bg: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+}
+a:visited { color: var(--link-visited); }
+a:hover { color: #000; }
+a:focus-visible { outline: 2px solid #000; outline-offset: 2px; }
+
+.site-header h1 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 0 0 0.75rem;
+}
+.site-header h1 a { text-decoration: none; color: var(--fg); }
+.tagline { color: var(--muted); font-size: 1rem; }
+
+nav a {
+  margin-right: 1.25rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--link);
+}
+nav a:hover { border-bottom-color: #000; color: #000; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 1.5rem 0;
+}
+
+footer p { color: var(--muted); font-size: 0.9rem; }
+
+.post-list { list-style: none; padding: 0; margin: 0; }
+.post-item {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px dotted #ccc;
+}
+.post-date { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.filters { margin-bottom: 1.5rem; }
+.filter-btn {
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: none;
+  border: 1px solid var(--fg);
+  color: var(--fg);
+  padding: 0.3rem 0.8rem;
+  margin: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+}
+.filter-btn:hover { background: #f2f2f2; }
+.filter-btn.active { background: var(--fg); color: #fff; }
+
+.post-meta { color: var(--muted); font-size: 0.95rem; }
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--fg);
+  padding: 0.4rem 0.9rem;
+  text-decoration: none;
+  color: var(--fg);
+}
+.btn:hover { background: #f2f2f2; }

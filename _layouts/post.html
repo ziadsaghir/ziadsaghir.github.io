@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<article class="post">
+  <h2>{{ page.title }}</h2>
+  <p class="post-meta">{{ page.date | date: "%Y-%m-%d" }}{% if page.category %} · {{ page.category }}{% endif %}</p>
+  {{ content }}
+</article>

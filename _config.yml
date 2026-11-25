@@ -1,0 +1,5 @@
+title: Ziad Saghir
+description: CTF writeups, threat hunting & CTI labs, and math notes.
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+exclude: [README.md, SECURITY.md]

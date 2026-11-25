@@ -1,0 +1,23 @@
+---
+layout: default
+title: CTF Writeups
+---
+<div class="filters">
+  <button class="filter-btn active" data-category="all">All</button>
+  <button class="filter-btn" data-category="forensic">Forensic</button>
+  <button class="filter-btn" data-category="steganography">Steganography</button>
+  <button class="filter-btn" data-category="network">Network</button>
+</div>
+
+<ul class="post-list">
+{% for post in site.posts %}
+  {% if post.section == "ctf" %}
+  <li class="post-item" data-category="{{ post.category }}">
+    <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+<script src="{{ "/assets/filter.js" | relative_url }}" defer></script>

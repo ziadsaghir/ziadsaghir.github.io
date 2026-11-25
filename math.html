@@ -1,0 +1,16 @@
+---
+layout: default
+title: Dump Math
+---
+<p>Math topics I find interesting enough to write down.</p>
+
+<ul class="post-list">
+{% for post in site.posts %}
+  {% if post.section == "math" %}
+  <li class="post-item">
+    <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+  {% endif %}
+{% endfor %}
+</ul>
